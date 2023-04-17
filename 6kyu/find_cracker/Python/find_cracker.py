@@ -32,6 +32,7 @@ def find_hack(arr):
             hacked.append(name)
     return hacked
 
+"""Sample array"""
 array = [
     ["name1", 445, ["B", "A", "A", "C", "A", "A"]],
     ["name2", 140, ["B", "A", "A", "A"]],
