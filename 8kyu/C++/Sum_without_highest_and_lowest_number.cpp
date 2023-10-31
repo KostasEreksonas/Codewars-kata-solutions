@@ -2,19 +2,23 @@
 #include <iostream>
 #include <vector>
 
-int sum(std::vector<int> numbers) {
-    int min, max;
-    min = max = numbers[0];
-    int sum = 0;
-    for (int i = 0; i < numbers.size(); i++) {
-      if (numbers[i] < min) {
-        min = numbers[i];
-      } else if (numbers[i] > max) {
-        max = numbers[i];
+int sum(std::vector<int> numbers){
+    if (numbers.size() > 1) {
+      int min, max;
+      min = max = numbers[0];
+      int sum = 0;
+      for (int i: numbers) {
+        if (i < min) {
+          min = i;
+        } else if (i > max) {
+          max = i;
+        }
+        sum += i;
       }
-      sum += numbers[i];
+      return sum-min-max;
+    } else {
+      return 0;
     }
-    return sum-min-max;
 }
 
 int main() {
