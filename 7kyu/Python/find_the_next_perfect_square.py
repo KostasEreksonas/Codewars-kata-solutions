@@ -2,12 +2,8 @@
 
 import math
 def find_next_square(sq):
-    # Return the next square if sq is a square, -1 otherwise
-    square = math.sqrt(sq)
-    if square % 1 > 0:
-        return -1
-    else:
-        return (square+1)**2
+    root = math.sqrt(sq)
+    return (root+1)**2 if root % 1 == 0 else -1
 
 print(find_next_square(121))
 print(find_next_square(625))
